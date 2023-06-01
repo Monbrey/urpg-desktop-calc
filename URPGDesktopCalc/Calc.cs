@@ -1428,7 +1428,7 @@ namespace URPGDesktopCalc
 
             if (A.AttackType.Compatibility.I.Contains(D.Type1) && !(A.Ability == "SCR" && D.Type1 == "GH") && D.Item != "Ring Target")
                 result *= 0.0;
-            if (A.AttackType.Compatibility.I.Contains(D.Type2) && (A.Ability != "SCR" || D.Type2 != "GH") && B.Item != "Ring Target")
+            if (A.AttackType.Compatibility.I.Contains(D.Type2) && !(A.Ability == "SCR" && D.Type2 == "GH") && D.Item != "Ring Target")
                 result *= 0.0;
 
             //Mysterious air current override - assumes the above would have already x2.0
