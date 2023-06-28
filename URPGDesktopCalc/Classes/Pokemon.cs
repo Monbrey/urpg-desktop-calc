@@ -14,6 +14,7 @@ namespace URPGDesktopCalc.Classes
         public double SPA { get; set; }
         public double SPD { get; set; }
         public double SPE { get; set; }
+        public string TeraType { get; set; }
 
         public Pokemon()
         {
@@ -27,13 +28,14 @@ namespace URPGDesktopCalc.Classes
 
             Type1 = values[1];
             Type2 = values[2];
+            TeraType = values[3];
 
-            MaxHP = double.Parse(values[3]);
-            ATT = double.Parse(values[4]);
-            DEF = double.Parse(values[5]);
-            SPA = double.Parse(values[6]);
-            SPD = double.Parse(values[7]);
-            SPE = double.Parse(values[8]);
+            MaxHP = double.Parse(values[4]);
+            ATT = double.Parse(values[5]);
+            DEF = double.Parse(values[6]);
+            SPA = double.Parse(values[7]);
+            SPD = double.Parse(values[8]);
+            SPE = double.Parse(values[9]);
         }
     }
 }

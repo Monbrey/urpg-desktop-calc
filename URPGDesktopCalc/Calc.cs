@@ -337,6 +337,22 @@ namespace URPGDesktopCalc
             UpdateHealthDisplay();
         }
 
+        protected void TeraPokemon(object sender, EventArgs e)
+        {
+            Button butt = (Button)sender;
+            char Which = butt.Name[butt.Name.Length - 1];
+
+            switch (Which)
+            {
+                case 'A':
+                    BattlePokemonA?.ToggleTerastal(butt);
+                    break;
+                case 'B':
+                    BattlePokemonB?.ToggleTerastal(butt);
+                    break;
+            }
+        }
+
         protected void ManualHPMod(object sender, EventArgs e)
         {
             Button butt = (Button)sender;
@@ -1408,14 +1424,32 @@ namespace URPGDesktopCalc
             if (A.Ability == "GV" && A.AttackType.Code == "NM") A.AttackType = Types[(int)TypeCode.E];
 
 
-            if (A.Type1 == A.AttackType.Code || A.Type2 == A.AttackType.Code)
+            if (A.isTera && A.AttackType.Code == A.TeraType)
+            {
+                if (A.Type1 == A.AttackType.Code || A.Type2 == A.AttackType.Code)
+                {
+                    if (A.Ability == "AD")
+                        return 2.25;
+                    else return 2;
+                }
+            }
+            else if (A.isTera && (A.AttackType.Code != A.TeraType) && A.Type1 == A.AttackType.Code || A.Type2 == A.AttackType.Code)
             {
                 if (A.Ability == "AD")
                     return 2.0;
                 else return 1.5;
             }
+            else
+            {
+                if (A.Type1 == A.AttackType.Code || A.Type2 == A.AttackType.Code)
+                {
+                    if (A.Ability == "AD")
+                        return 2.0;
+                    else return 1.5;
+                }
 
-            return 1.0;
+                return 1.0;
+            }
         }
 
         protected double CheckTypes(BattlePokemon A, BattlePokemon D)
@@ -1423,28 +1457,51 @@ namespace URPGDesktopCalc
             //A = Attacker, D = Defender
             double result = 1.0;
 
-            if(A.AttackType.Compatibility.SE.Contains(D.Type1))
-                result *= 2.0;
-            if(A.AttackType.Compatibility.SE.Contains(D.Type2))
-                result *= 2.0;
+            if (D.isTera)
+            {
+                if (A.AttackType.Compatibility.SE.Contains(D.TeraType))
+                    result *= 2.0;
 
-            if(A.AttackType.Compatibility.NVE.Contains(D.Type1))
-                result *= 0.5;
-            if(A.AttackType.Compatibility.NVE.Contains(D.Type2))
-                result *= 0.5;
+                if (A.AttackType.Compatibility.NVE.Contains(D.TeraType))
+                    result *= 0.5;
 
-            if (A.AttackType.Compatibility.I.Contains(D.Type1))
-                result *= 0.0;
-            if (A.AttackType.Compatibility.I.Contains(D.Type2))
-                result *= 0.0;
+                if (A.AttackType.Compatibility.I.Contains(D.TeraType))
+                    result *= 0.0;
+            }
+            else
+            {
+                if (A.AttackType.Compatibility.SE.Contains(D.Type1))
+                    result *= 2.0;
+                if (A.AttackType.Compatibility.SE.Contains(D.Type2))
+                    result *= 2.0;
+
+                if (A.AttackType.Compatibility.NVE.Contains(D.Type1))
+                    result *= 0.5;
+                if (A.AttackType.Compatibility.NVE.Contains(D.Type2))
+                    result *= 0.5;
+
+                if (A.AttackType.Compatibility.I.Contains(D.Type1))
+                    result *= 0.0;
+                if (A.AttackType.Compatibility.I.Contains(D.Type2))
+                    result *= 0.0;
+            }
+
 
             //Mysterious air current override - assumes the above would have already x2.0
             if(((Object)WeatherBox.SelectedItem).Code == "MAC")
             {
-                if (A.AttackType.Compatibility.SE.Contains(D.Type1) && D.Type1 == "FL")
-                    result *= 0.5;
-                if (A.AttackType.Compatibility.SE.Contains(D.Type2) && D.Type2 == "FL")
-                    result *= 0.5;
+                if (D.isTera)
+                {
+                    if (A.AttackType.Compatibility.SE.Contains(D.TeraType) && D.Type1 == "FL")
+                        result *= 0.5;
+                }
+                else
+                {
+                    if (A.AttackType.Compatibility.SE.Contains(D.Type1) && D.Type1 == "FL")
+                        result *= 0.5;
+                    if (A.AttackType.Compatibility.SE.Contains(D.Type2) && D.Type2 == "FL")
+                        result *= 0.5;
+                }
             }
 
             return result;
@@ -1947,6 +2004,16 @@ namespace URPGDesktopCalc
         private void StealFocus(object sender, EventArgs e)
         {
             this.ActiveControl = PokemonHeading;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void ComboBoxTypedIn(object sender, KeyPressEventArgs e)
