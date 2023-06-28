@@ -71,6 +71,8 @@ namespace URPGDesktopCalc
             System.Windows.Forms.Label AccuracyLabel;
             System.Windows.Forms.Label EvasionLabel;
             System.Windows.Forms.Label AccResultLabel;
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calc));
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.ClearMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -119,6 +121,10 @@ namespace URPGDesktopCalc
             this.Store1A = new System.Windows.Forms.Button();
             this.TeamALabel = new System.Windows.Forms.Label();
             this.RefCalcTab = new System.Windows.Forms.TabPage();
+            this.TeraB = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.TeraA = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.DynamaxB = new System.Windows.Forms.Button();
             this.DynamaxA = new System.Windows.Forms.Button();
             this.ConfuseB = new System.Windows.Forms.Button();
@@ -249,6 +255,8 @@ namespace URPGDesktopCalc
             AccuracyLabel = new System.Windows.Forms.Label();
             EvasionLabel = new System.Windows.Forms.Label();
             AccResultLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             this.MenuStrip.SuspendLayout();
             this.TeamStorageTab.SuspendLayout();
             this.RefCalcTab.SuspendLayout();
@@ -312,7 +320,7 @@ namespace URPGDesktopCalc
             GenderLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             GenderLabel1.AutoSize = true;
             GenderLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            GenderLabel1.Location = new System.Drawing.Point(23, 106);
+            GenderLabel1.Location = new System.Drawing.Point(23, 137);
             GenderLabel1.Name = "GenderLabel1";
             GenderLabel1.Size = new System.Drawing.Size(51, 15);
             GenderLabel1.TabIndex = 165;
@@ -323,7 +331,7 @@ namespace URPGDesktopCalc
             GenderLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             GenderLabel2.AutoSize = true;
             GenderLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            GenderLabel2.Location = new System.Drawing.Point(283, 106);
+            GenderLabel2.Location = new System.Drawing.Point(283, 137);
             GenderLabel2.Name = "GenderLabel2";
             GenderLabel2.Size = new System.Drawing.Size(51, 15);
             GenderLabel2.TabIndex = 167;
@@ -334,7 +342,7 @@ namespace URPGDesktopCalc
             AbilityLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             AbilityLabel1.AutoSize = true;
             AbilityLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            AbilityLabel1.Location = new System.Drawing.Point(23, 136);
+            AbilityLabel1.Location = new System.Drawing.Point(23, 167);
             AbilityLabel1.Name = "AbilityLabel1";
             AbilityLabel1.Size = new System.Drawing.Size(41, 15);
             AbilityLabel1.TabIndex = 168;
@@ -345,7 +353,7 @@ namespace URPGDesktopCalc
             AbilityLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             AbilityLabel2.AutoSize = true;
             AbilityLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            AbilityLabel2.Location = new System.Drawing.Point(283, 136);
+            AbilityLabel2.Location = new System.Drawing.Point(283, 167);
             AbilityLabel2.Name = "AbilityLabel2";
             AbilityLabel2.Size = new System.Drawing.Size(41, 15);
             AbilityLabel2.TabIndex = 170;
@@ -356,7 +364,7 @@ namespace URPGDesktopCalc
             ItemLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             ItemLabel1.AutoSize = true;
             ItemLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ItemLabel1.Location = new System.Drawing.Point(23, 196);
+            ItemLabel1.Location = new System.Drawing.Point(23, 227);
             ItemLabel1.Name = "ItemLabel1";
             ItemLabel1.Size = new System.Drawing.Size(63, 15);
             ItemLabel1.TabIndex = 172;
@@ -367,7 +375,7 @@ namespace URPGDesktopCalc
             ItemLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             ItemLabel2.AutoSize = true;
             ItemLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ItemLabel2.Location = new System.Drawing.Point(283, 196);
+            ItemLabel2.Location = new System.Drawing.Point(283, 227);
             ItemLabel2.Name = "ItemLabel2";
             ItemLabel2.Size = new System.Drawing.Size(63, 15);
             ItemLabel2.TabIndex = 175;
@@ -378,7 +386,7 @@ namespace URPGDesktopCalc
             MaxHPLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             MaxHPLabel1.AutoSize = true;
             MaxHPLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            MaxHPLabel1.Location = new System.Drawing.Point(23, 266);
+            MaxHPLabel1.Location = new System.Drawing.Point(23, 291);
             MaxHPLabel1.Name = "MaxHPLabel1";
             MaxHPLabel1.Size = new System.Drawing.Size(54, 15);
             MaxHPLabel1.TabIndex = 177;
@@ -389,7 +397,7 @@ namespace URPGDesktopCalc
             MaxHPLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             MaxHPLabel2.AutoSize = true;
             MaxHPLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            MaxHPLabel2.Location = new System.Drawing.Point(283, 266);
+            MaxHPLabel2.Location = new System.Drawing.Point(283, 291);
             MaxHPLabel2.Name = "MaxHPLabel2";
             MaxHPLabel2.Size = new System.Drawing.Size(54, 15);
             MaxHPLabel2.TabIndex = 179;
@@ -400,7 +408,7 @@ namespace URPGDesktopCalc
             AttackLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             AttackLabel1.AutoSize = true;
             AttackLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            AttackLabel1.Location = new System.Drawing.Point(23, 294);
+            AttackLabel1.Location = new System.Drawing.Point(23, 319);
             AttackLabel1.Name = "AttackLabel1";
             AttackLabel1.Size = new System.Drawing.Size(42, 15);
             AttackLabel1.TabIndex = 190;
@@ -411,7 +419,7 @@ namespace URPGDesktopCalc
             DefenceLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             DefenceLabel1.AutoSize = true;
             DefenceLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            DefenceLabel1.Location = new System.Drawing.Point(23, 322);
+            DefenceLabel1.Location = new System.Drawing.Point(23, 347);
             DefenceLabel1.Name = "DefenceLabel1";
             DefenceLabel1.Size = new System.Drawing.Size(56, 15);
             DefenceLabel1.TabIndex = 191;
@@ -422,7 +430,7 @@ namespace URPGDesktopCalc
             SpAttackLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             SpAttackLabel1.AutoSize = true;
             SpAttackLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            SpAttackLabel1.Location = new System.Drawing.Point(23, 350);
+            SpAttackLabel1.Location = new System.Drawing.Point(23, 375);
             SpAttackLabel1.Name = "SpAttackLabel1";
             SpAttackLabel1.Size = new System.Drawing.Size(44, 15);
             SpAttackLabel1.TabIndex = 192;
@@ -433,7 +441,7 @@ namespace URPGDesktopCalc
             SpDefenceLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             SpDefenceLabel1.AutoSize = true;
             SpDefenceLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            SpDefenceLabel1.Location = new System.Drawing.Point(23, 378);
+            SpDefenceLabel1.Location = new System.Drawing.Point(23, 403);
             SpDefenceLabel1.Name = "SpDefenceLabel1";
             SpDefenceLabel1.Size = new System.Drawing.Size(50, 15);
             SpDefenceLabel1.TabIndex = 193;
@@ -444,7 +452,7 @@ namespace URPGDesktopCalc
             SpeedLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             SpeedLabel1.AutoSize = true;
             SpeedLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            SpeedLabel1.Location = new System.Drawing.Point(23, 406);
+            SpeedLabel1.Location = new System.Drawing.Point(23, 431);
             SpeedLabel1.Name = "SpeedLabel1";
             SpeedLabel1.Size = new System.Drawing.Size(46, 15);
             SpeedLabel1.TabIndex = 194;
@@ -455,7 +463,7 @@ namespace URPGDesktopCalc
             AttackLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             AttackLabel2.AutoSize = true;
             AttackLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            AttackLabel2.Location = new System.Drawing.Point(283, 294);
+            AttackLabel2.Location = new System.Drawing.Point(283, 319);
             AttackLabel2.Name = "AttackLabel2";
             AttackLabel2.Size = new System.Drawing.Size(42, 15);
             AttackLabel2.TabIndex = 195;
@@ -466,7 +474,7 @@ namespace URPGDesktopCalc
             DefenceLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             DefenceLabel2.AutoSize = true;
             DefenceLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            DefenceLabel2.Location = new System.Drawing.Point(283, 322);
+            DefenceLabel2.Location = new System.Drawing.Point(283, 347);
             DefenceLabel2.Name = "DefenceLabel2";
             DefenceLabel2.Size = new System.Drawing.Size(56, 15);
             DefenceLabel2.TabIndex = 196;
@@ -477,7 +485,7 @@ namespace URPGDesktopCalc
             SpAttackLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             SpAttackLabel2.AutoSize = true;
             SpAttackLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            SpAttackLabel2.Location = new System.Drawing.Point(283, 350);
+            SpAttackLabel2.Location = new System.Drawing.Point(283, 375);
             SpAttackLabel2.Name = "SpAttackLabel2";
             SpAttackLabel2.Size = new System.Drawing.Size(44, 15);
             SpAttackLabel2.TabIndex = 197;
@@ -488,7 +496,7 @@ namespace URPGDesktopCalc
             SpDefenceLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             SpDefenceLabel2.AutoSize = true;
             SpDefenceLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            SpDefenceLabel2.Location = new System.Drawing.Point(283, 378);
+            SpDefenceLabel2.Location = new System.Drawing.Point(283, 403);
             SpDefenceLabel2.Name = "SpDefenceLabel2";
             SpDefenceLabel2.Size = new System.Drawing.Size(50, 15);
             SpDefenceLabel2.TabIndex = 198;
@@ -499,7 +507,7 @@ namespace URPGDesktopCalc
             SpeedLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             SpeedLabel2.AutoSize = true;
             SpeedLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            SpeedLabel2.Location = new System.Drawing.Point(283, 406);
+            SpeedLabel2.Location = new System.Drawing.Point(283, 431);
             SpeedLabel2.Name = "SpeedLabel2";
             SpeedLabel2.Size = new System.Drawing.Size(46, 15);
             SpeedLabel2.TabIndex = 199;
@@ -512,7 +520,7 @@ namespace URPGDesktopCalc
             DamageHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             DamageHeading.Location = new System.Drawing.Point(692, 18);
             DamageHeading.Name = "DamageHeading";
-            DamageHeading.Size = new System.Drawing.Size(152, 16);
+            DamageHeading.Size = new System.Drawing.Size(151, 16);
             DamageHeading.TabIndex = 211;
             DamageHeading.Text = "Damage Calculation:";
             // 
@@ -653,7 +661,7 @@ namespace URPGDesktopCalc
             StatusLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             StatusLabel1.AutoSize = true;
             StatusLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            StatusLabel1.Location = new System.Drawing.Point(23, 166);
+            StatusLabel1.Location = new System.Drawing.Point(23, 197);
             StatusLabel1.Name = "StatusLabel1";
             StatusLabel1.Size = new System.Drawing.Size(57, 15);
             StatusLabel1.TabIndex = 263;
@@ -664,7 +672,7 @@ namespace URPGDesktopCalc
             StatusLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             StatusLabel2.AutoSize = true;
             StatusLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            StatusLabel2.Location = new System.Drawing.Point(283, 166);
+            StatusLabel2.Location = new System.Drawing.Point(283, 197);
             StatusLabel2.Name = "StatusLabel2";
             StatusLabel2.Size = new System.Drawing.Size(57, 15);
             StatusLabel2.TabIndex = 266;
@@ -675,7 +683,7 @@ namespace URPGDesktopCalc
             WeatherLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             WeatherLabel1.AutoSize = true;
             WeatherLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            WeatherLabel1.Location = new System.Drawing.Point(23, 452);
+            WeatherLabel1.Location = new System.Drawing.Point(23, 477);
             WeatherLabel1.Name = "WeatherLabel1";
             WeatherLabel1.Size = new System.Drawing.Size(56, 15);
             WeatherLabel1.TabIndex = 269;
@@ -686,7 +694,7 @@ namespace URPGDesktopCalc
             OtherLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             OtherLabel.AutoSize = true;
             OtherLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            OtherLabel.Location = new System.Drawing.Point(283, 452);
+            OtherLabel.Location = new System.Drawing.Point(283, 477);
             OtherLabel.Name = "OtherLabel";
             OtherLabel.Size = new System.Drawing.Size(40, 15);
             OtherLabel.TabIndex = 271;
@@ -727,6 +735,28 @@ namespace URPGDesktopCalc
             AccResultLabel.TabIndex = 283;
             AccResultLabel.Text = "Result:";
             AccResultLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(23, 106);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(61, 15);
+            label1.TabIndex = 292;
+            label1.Text = "TeraType:";
+            // 
+            // label2
+            // 
+            label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(284, 106);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(61, 15);
+            label2.TabIndex = 295;
+            label2.Text = "TeraType:";
             // 
             // MenuStrip
             // 
@@ -1201,7 +1231,7 @@ namespace URPGDesktopCalc
             this.NotesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NotesLabel.Location = new System.Drawing.Point(744, 16);
             this.NotesLabel.Name = "NotesLabel";
-            this.NotesLabel.Size = new System.Drawing.Size(53, 16);
+            this.NotesLabel.Size = new System.Drawing.Size(52, 16);
             this.NotesLabel.TabIndex = 38;
             this.NotesLabel.Text = "Notes:";
             // 
@@ -1212,7 +1242,7 @@ namespace URPGDesktopCalc
             this.TeamBLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TeamBLabel.Location = new System.Drawing.Point(379, 16);
             this.TeamBLabel.Name = "TeamBLabel";
-            this.TeamBLabel.Size = new System.Drawing.Size(66, 16);
+            this.TeamBLabel.Size = new System.Drawing.Size(65, 16);
             this.TeamBLabel.TabIndex = 19;
             this.TeamBLabel.Text = "Team B:";
             // 
@@ -1245,12 +1275,18 @@ namespace URPGDesktopCalc
             this.TeamALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TeamALabel.Location = new System.Drawing.Point(109, 16);
             this.TeamALabel.Name = "TeamALabel";
-            this.TeamALabel.Size = new System.Drawing.Size(66, 16);
+            this.TeamALabel.Size = new System.Drawing.Size(65, 16);
             this.TeamALabel.TabIndex = 0;
             this.TeamALabel.Text = "Team A:";
             // 
             // RefCalcTab
             // 
+            this.RefCalcTab.Controls.Add(this.TeraB);
+            this.RefCalcTab.Controls.Add(label2);
+            this.RefCalcTab.Controls.Add(this.comboBox2);
+            this.RefCalcTab.Controls.Add(this.TeraA);
+            this.RefCalcTab.Controls.Add(label1);
+            this.RefCalcTab.Controls.Add(this.comboBox1);
             this.RefCalcTab.Controls.Add(this.DynamaxB);
             this.RefCalcTab.Controls.Add(this.DynamaxA);
             this.RefCalcTab.Controls.Add(this.ConfuseB);
@@ -1389,17 +1425,75 @@ namespace URPGDesktopCalc
             this.RefCalcTab.UseVisualStyleBackColor = true;
             this.RefCalcTab.Click += new System.EventHandler(this.StealFocus);
             // 
+            // TeraB
+            // 
+            this.TeraB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TeraB.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.TeraB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeraB.Image = ((System.Drawing.Image)(resources.GetObject("TeraB.Image")));
+            this.TeraB.Location = new System.Drawing.Point(443, 103);
+            this.TeraB.Name = "TeraB";
+            this.TeraB.Size = new System.Drawing.Size(50, 30);
+            this.TeraB.TabIndex = 296;
+            this.TeraB.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox2.DisplayMember = "Name";
+            this.comboBox2.DropDownHeight = 95;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.IntegralHeight = false;
+            this.comboBox2.Location = new System.Drawing.Point(354, 103);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(72, 23);
+            this.comboBox2.TabIndex = 294;
+            // 
+            // TeraA
+            // 
+            this.TeraA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TeraA.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.TeraA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeraA.Image = ((System.Drawing.Image)(resources.GetObject("TeraA.Image")));
+            this.TeraA.Location = new System.Drawing.Point(182, 103);
+            this.TeraA.Name = "TeraA";
+            this.TeraA.Size = new System.Drawing.Size(50, 30);
+            this.TeraA.TabIndex = 293;
+            this.TeraA.UseVisualStyleBackColor = true;
+            this.TeraA.Click += new System.EventHandler(this.TeraPokemon);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.DisplayMember = "Name";
+            this.comboBox1.DropDownHeight = 95;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.Location = new System.Drawing.Point(93, 103);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(72, 23);
+            this.comboBox1.TabIndex = 291;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+
+            // 
             // DynamaxB
             // 
             this.DynamaxB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DynamaxB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DynamaxB.Image = ((System.Drawing.Image)(resources.GetObject("DynamaxB.Image")));
-            this.DynamaxB.Location = new System.Drawing.Point(431, 254);
+            this.DynamaxB.Location = new System.Drawing.Point(431, 279);
             this.DynamaxB.Name = "DynamaxB";
             this.DynamaxB.Size = new System.Drawing.Size(50, 30);
             this.DynamaxB.TabIndex = 289;
             this.DynamaxB.UseVisualStyleBackColor = true;
             this.DynamaxB.Click += new System.EventHandler(this.DynamaxPokemon);
+            this.TeraA.Click += new System.EventHandler(this.TeraPokemon);
             // 
             // DynamaxA
             // 
@@ -1407,7 +1501,7 @@ namespace URPGDesktopCalc
             this.DynamaxA.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DynamaxA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DynamaxA.Image = ((System.Drawing.Image)(resources.GetObject("DynamaxA.Image")));
-            this.DynamaxA.Location = new System.Drawing.Point(171, 254);
+            this.DynamaxA.Location = new System.Drawing.Point(171, 279);
             this.DynamaxA.Name = "DynamaxA";
             this.DynamaxA.Size = new System.Drawing.Size(50, 30);
             this.DynamaxA.TabIndex = 288;
@@ -1638,7 +1732,7 @@ namespace URPGDesktopCalc
             // 
             this.SpeedA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SpeedA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpeedA.Location = new System.Drawing.Point(93, 403);
+            this.SpeedA.Location = new System.Drawing.Point(93, 428);
             this.SpeedA.Name = "SpeedA";
             this.SpeedA.Size = new System.Drawing.Size(72, 21);
             this.SpeedA.TabIndex = 189;
@@ -1650,7 +1744,7 @@ namespace URPGDesktopCalc
             // 
             this.SpDefenceA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SpDefenceA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpDefenceA.Location = new System.Drawing.Point(93, 375);
+            this.SpDefenceA.Location = new System.Drawing.Point(93, 400);
             this.SpDefenceA.Name = "SpDefenceA";
             this.SpDefenceA.Size = new System.Drawing.Size(72, 21);
             this.SpDefenceA.TabIndex = 188;
@@ -1662,7 +1756,7 @@ namespace URPGDesktopCalc
             // 
             this.SpAttackA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SpAttackA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpAttackA.Location = new System.Drawing.Point(93, 347);
+            this.SpAttackA.Location = new System.Drawing.Point(93, 372);
             this.SpAttackA.Name = "SpAttackA";
             this.SpAttackA.Size = new System.Drawing.Size(72, 21);
             this.SpAttackA.TabIndex = 187;
@@ -1674,7 +1768,7 @@ namespace URPGDesktopCalc
             // 
             this.DefenceA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DefenceA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DefenceA.Location = new System.Drawing.Point(93, 319);
+            this.DefenceA.Location = new System.Drawing.Point(93, 344);
             this.DefenceA.Name = "DefenceA";
             this.DefenceA.Size = new System.Drawing.Size(72, 21);
             this.DefenceA.TabIndex = 186;
@@ -1686,7 +1780,7 @@ namespace URPGDesktopCalc
             // 
             this.AttackA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AttackA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AttackA.Location = new System.Drawing.Point(93, 291);
+            this.AttackA.Location = new System.Drawing.Point(93, 316);
             this.AttackA.Name = "AttackA";
             this.AttackA.Size = new System.Drawing.Size(72, 21);
             this.AttackA.TabIndex = 185;
@@ -1698,7 +1792,7 @@ namespace URPGDesktopCalc
             // 
             this.SpeedB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SpeedB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpeedB.Location = new System.Drawing.Point(353, 403);
+            this.SpeedB.Location = new System.Drawing.Point(353, 428);
             this.SpeedB.Name = "SpeedB";
             this.SpeedB.Size = new System.Drawing.Size(72, 21);
             this.SpeedB.TabIndex = 184;
@@ -1710,7 +1804,7 @@ namespace URPGDesktopCalc
             // 
             this.SpDefenceB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SpDefenceB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpDefenceB.Location = new System.Drawing.Point(353, 375);
+            this.SpDefenceB.Location = new System.Drawing.Point(353, 400);
             this.SpDefenceB.Name = "SpDefenceB";
             this.SpDefenceB.Size = new System.Drawing.Size(72, 21);
             this.SpDefenceB.TabIndex = 183;
@@ -1722,7 +1816,7 @@ namespace URPGDesktopCalc
             // 
             this.SpAttackB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SpAttackB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpAttackB.Location = new System.Drawing.Point(353, 347);
+            this.SpAttackB.Location = new System.Drawing.Point(353, 372);
             this.SpAttackB.Name = "SpAttackB";
             this.SpAttackB.Size = new System.Drawing.Size(72, 21);
             this.SpAttackB.TabIndex = 182;
@@ -1734,7 +1828,7 @@ namespace URPGDesktopCalc
             // 
             this.DefenceB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DefenceB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DefenceB.Location = new System.Drawing.Point(353, 319);
+            this.DefenceB.Location = new System.Drawing.Point(353, 344);
             this.DefenceB.Name = "DefenceB";
             this.DefenceB.Size = new System.Drawing.Size(72, 21);
             this.DefenceB.TabIndex = 181;
@@ -1746,7 +1840,7 @@ namespace URPGDesktopCalc
             // 
             this.AttackB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AttackB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AttackB.Location = new System.Drawing.Point(353, 291);
+            this.AttackB.Location = new System.Drawing.Point(353, 316);
             this.AttackB.Name = "AttackB";
             this.AttackB.Size = new System.Drawing.Size(72, 21);
             this.AttackB.TabIndex = 180;
@@ -1758,7 +1852,7 @@ namespace URPGDesktopCalc
             // 
             this.MaxHPB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MaxHPB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxHPB.Location = new System.Drawing.Point(353, 263);
+            this.MaxHPB.Location = new System.Drawing.Point(353, 288);
             this.MaxHPB.Name = "MaxHPB";
             this.MaxHPB.Size = new System.Drawing.Size(72, 21);
             this.MaxHPB.TabIndex = 178;
@@ -1770,7 +1864,7 @@ namespace URPGDesktopCalc
             // 
             this.MaxHPA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MaxHPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxHPA.Location = new System.Drawing.Point(93, 263);
+            this.MaxHPA.Location = new System.Drawing.Point(93, 288);
             this.MaxHPA.Name = "MaxHPA";
             this.MaxHPA.Size = new System.Drawing.Size(72, 21);
             this.MaxHPA.TabIndex = 176;
@@ -1803,7 +1897,7 @@ namespace URPGDesktopCalc
             this.OtherBox.Items.AddRange(new object[] {
             "(none)",
             "Wonder Room"});
-            this.OtherBox.Location = new System.Drawing.Point(353, 449);
+            this.OtherBox.Location = new System.Drawing.Point(353, 474);
             this.OtherBox.Name = "OtherBox";
             this.OtherBox.Size = new System.Drawing.Size(150, 23);
             this.OtherBox.TabIndex = 272;
@@ -1819,7 +1913,7 @@ namespace URPGDesktopCalc
             this.WeatherBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WeatherBox.FormattingEnabled = true;
             this.WeatherBox.IntegralHeight = false;
-            this.WeatherBox.Location = new System.Drawing.Point(93, 449);
+            this.WeatherBox.Location = new System.Drawing.Point(93, 474);
             this.WeatherBox.Name = "WeatherBox";
             this.WeatherBox.Size = new System.Drawing.Size(150, 23);
             this.WeatherBox.TabIndex = 270;
@@ -1836,7 +1930,7 @@ namespace URPGDesktopCalc
             this.EffectB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EffectB.FormattingEnabled = true;
             this.EffectB.IntegralHeight = false;
-            this.EffectB.Location = new System.Drawing.Point(431, 163);
+            this.EffectB.Location = new System.Drawing.Point(431, 194);
             this.EffectB.Name = "EffectB";
             this.EffectB.Size = new System.Drawing.Size(72, 23);
             this.EffectB.TabIndex = 268;
@@ -1852,7 +1946,7 @@ namespace URPGDesktopCalc
             this.StatusB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusB.FormattingEnabled = true;
             this.StatusB.IntegralHeight = false;
-            this.StatusB.Location = new System.Drawing.Point(353, 163);
+            this.StatusB.Location = new System.Drawing.Point(353, 194);
             this.StatusB.Name = "StatusB";
             this.StatusB.Size = new System.Drawing.Size(72, 23);
             this.StatusB.TabIndex = 267;
@@ -1869,7 +1963,7 @@ namespace URPGDesktopCalc
             this.EffectA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EffectA.FormattingEnabled = true;
             this.EffectA.IntegralHeight = false;
-            this.EffectA.Location = new System.Drawing.Point(171, 163);
+            this.EffectA.Location = new System.Drawing.Point(171, 194);
             this.EffectA.Name = "EffectA";
             this.EffectA.Size = new System.Drawing.Size(72, 23);
             this.EffectA.TabIndex = 265;
@@ -1885,7 +1979,7 @@ namespace URPGDesktopCalc
             this.StatusA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusA.FormattingEnabled = true;
             this.StatusA.IntegralHeight = false;
-            this.StatusA.Location = new System.Drawing.Point(93, 163);
+            this.StatusA.Location = new System.Drawing.Point(93, 194);
             this.StatusA.Name = "StatusA";
             this.StatusA.Size = new System.Drawing.Size(72, 23);
             this.StatusA.TabIndex = 264;
@@ -2228,7 +2322,7 @@ namespace URPGDesktopCalc
             this.SpeModB.DisplayMember = "Name";
             this.SpeModB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpeModB.FormattingEnabled = true;
-            this.SpeModB.Location = new System.Drawing.Point(431, 403);
+            this.SpeModB.Location = new System.Drawing.Point(431, 428);
             this.SpeModB.Name = "SpeModB";
             this.SpeModB.Size = new System.Drawing.Size(50, 23);
             this.SpeModB.TabIndex = 210;
@@ -2241,7 +2335,7 @@ namespace URPGDesktopCalc
             this.SpdModB.DisplayMember = "Name";
             this.SpdModB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpdModB.FormattingEnabled = true;
-            this.SpdModB.Location = new System.Drawing.Point(431, 375);
+            this.SpdModB.Location = new System.Drawing.Point(431, 400);
             this.SpdModB.Name = "SpdModB";
             this.SpdModB.Size = new System.Drawing.Size(50, 23);
             this.SpdModB.TabIndex = 209;
@@ -2254,7 +2348,7 @@ namespace URPGDesktopCalc
             this.SpaModB.DisplayMember = "Name";
             this.SpaModB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpaModB.FormattingEnabled = true;
-            this.SpaModB.Location = new System.Drawing.Point(431, 347);
+            this.SpaModB.Location = new System.Drawing.Point(431, 372);
             this.SpaModB.Name = "SpaModB";
             this.SpaModB.Size = new System.Drawing.Size(50, 23);
             this.SpaModB.TabIndex = 208;
@@ -2267,7 +2361,7 @@ namespace URPGDesktopCalc
             this.DefModB.DisplayMember = "Name";
             this.DefModB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DefModB.FormattingEnabled = true;
-            this.DefModB.Location = new System.Drawing.Point(431, 319);
+            this.DefModB.Location = new System.Drawing.Point(431, 344);
             this.DefModB.Name = "DefModB";
             this.DefModB.Size = new System.Drawing.Size(50, 23);
             this.DefModB.TabIndex = 207;
@@ -2280,7 +2374,7 @@ namespace URPGDesktopCalc
             this.AttModB.DisplayMember = "Name";
             this.AttModB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AttModB.FormattingEnabled = true;
-            this.AttModB.Location = new System.Drawing.Point(431, 291);
+            this.AttModB.Location = new System.Drawing.Point(431, 316);
             this.AttModB.Name = "AttModB";
             this.AttModB.Size = new System.Drawing.Size(50, 23);
             this.AttModB.TabIndex = 206;
@@ -2293,7 +2387,7 @@ namespace URPGDesktopCalc
             this.SpeModA.DisplayMember = "Name";
             this.SpeModA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpeModA.FormattingEnabled = true;
-            this.SpeModA.Location = new System.Drawing.Point(171, 403);
+            this.SpeModA.Location = new System.Drawing.Point(171, 428);
             this.SpeModA.Name = "SpeModA";
             this.SpeModA.Size = new System.Drawing.Size(50, 23);
             this.SpeModA.TabIndex = 205;
@@ -2306,7 +2400,7 @@ namespace URPGDesktopCalc
             this.SpdModA.DisplayMember = "Name";
             this.SpdModA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpdModA.FormattingEnabled = true;
-            this.SpdModA.Location = new System.Drawing.Point(171, 375);
+            this.SpdModA.Location = new System.Drawing.Point(171, 400);
             this.SpdModA.Name = "SpdModA";
             this.SpdModA.Size = new System.Drawing.Size(50, 23);
             this.SpdModA.TabIndex = 204;
@@ -2319,7 +2413,7 @@ namespace URPGDesktopCalc
             this.SpaModA.DisplayMember = "Name";
             this.SpaModA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpaModA.FormattingEnabled = true;
-            this.SpaModA.Location = new System.Drawing.Point(171, 347);
+            this.SpaModA.Location = new System.Drawing.Point(171, 372);
             this.SpaModA.Name = "SpaModA";
             this.SpaModA.Size = new System.Drawing.Size(50, 23);
             this.SpaModA.TabIndex = 203;
@@ -2332,7 +2426,7 @@ namespace URPGDesktopCalc
             this.DefModA.DisplayMember = "Name";
             this.DefModA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DefModA.FormattingEnabled = true;
-            this.DefModA.Location = new System.Drawing.Point(171, 319);
+            this.DefModA.Location = new System.Drawing.Point(171, 344);
             this.DefModA.Name = "DefModA";
             this.DefModA.Size = new System.Drawing.Size(50, 23);
             this.DefModA.TabIndex = 202;
@@ -2345,7 +2439,7 @@ namespace URPGDesktopCalc
             this.AttModA.DisplayMember = "Name";
             this.AttModA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AttModA.FormattingEnabled = true;
-            this.AttModA.Location = new System.Drawing.Point(171, 291);
+            this.AttModA.Location = new System.Drawing.Point(171, 316);
             this.AttModA.Name = "AttModA";
             this.AttModA.Size = new System.Drawing.Size(50, 23);
             this.AttModA.TabIndex = 201;
@@ -2359,7 +2453,7 @@ namespace URPGDesktopCalc
             this.PokemonHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PokemonHeading.Location = new System.Drawing.Point(207, 18);
             this.PokemonHeading.Name = "PokemonHeading";
-            this.PokemonHeading.Size = new System.Drawing.Size(116, 16);
+            this.PokemonHeading.Size = new System.Drawing.Size(115, 16);
             this.PokemonHeading.TabIndex = 200;
             this.PokemonHeading.Text = "Pokemon Stats:";
             // 
@@ -2593,7 +2687,7 @@ namespace URPGDesktopCalc
             "Yache Berry",
             "Zap Plate",
             "Zoom Lens *"});
-            this.HItemB.Location = new System.Drawing.Point(353, 193);
+            this.HItemB.Location = new System.Drawing.Point(353, 224);
             this.HItemB.Name = "HItemB";
             this.HItemB.Size = new System.Drawing.Size(150, 23);
             this.HItemB.TabIndex = 174;
@@ -2831,7 +2925,7 @@ namespace URPGDesktopCalc
             "Yache Berry",
             "Zap Plate",
             "Zoom Lens *"});
-            this.HItemA.Location = new System.Drawing.Point(93, 193);
+            this.HItemA.Location = new System.Drawing.Point(93, 224);
             this.HItemA.Name = "HItemA";
             this.HItemA.Size = new System.Drawing.Size(150, 23);
             this.HItemA.TabIndex = 173;
@@ -2848,7 +2942,7 @@ namespace URPGDesktopCalc
             this.AbilityB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AbilityB.FormattingEnabled = true;
             this.AbilityB.IntegralHeight = false;
-            this.AbilityB.Location = new System.Drawing.Point(353, 133);
+            this.AbilityB.Location = new System.Drawing.Point(353, 164);
             this.AbilityB.Name = "AbilityB";
             this.AbilityB.Size = new System.Drawing.Size(150, 23);
             this.AbilityB.TabIndex = 171;
@@ -2865,7 +2959,7 @@ namespace URPGDesktopCalc
             this.AbilityA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AbilityA.FormattingEnabled = true;
             this.AbilityA.IntegralHeight = false;
-            this.AbilityA.Location = new System.Drawing.Point(93, 133);
+            this.AbilityA.Location = new System.Drawing.Point(93, 164);
             this.AbilityA.Name = "AbilityA";
             this.AbilityA.Size = new System.Drawing.Size(150, 23);
             this.AbilityA.TabIndex = 169;
@@ -2882,7 +2976,7 @@ namespace URPGDesktopCalc
             this.GenderB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GenderB.FormattingEnabled = true;
             this.GenderB.IntegralHeight = false;
-            this.GenderB.Location = new System.Drawing.Point(353, 103);
+            this.GenderB.Location = new System.Drawing.Point(353, 134);
             this.GenderB.Name = "GenderB";
             this.GenderB.Size = new System.Drawing.Size(72, 23);
             this.GenderB.TabIndex = 166;
@@ -2898,7 +2992,7 @@ namespace URPGDesktopCalc
             this.GenderA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GenderA.FormattingEnabled = true;
             this.GenderA.IntegralHeight = false;
-            this.GenderA.Location = new System.Drawing.Point(93, 103);
+            this.GenderA.Location = new System.Drawing.Point(93, 134);
             this.GenderA.Name = "GenderA";
             this.GenderA.Size = new System.Drawing.Size(72, 23);
             this.GenderA.TabIndex = 164;
@@ -3187,6 +3281,10 @@ namespace URPGDesktopCalc
         private System.Windows.Forms.ComboBox PokemonB;
         private System.Windows.Forms.ComboBox PokemonA;
         private System.Windows.Forms.TabControl TabController;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button TeraB;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button TeraA;
     }
 }
 

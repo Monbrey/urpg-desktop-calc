@@ -30,6 +30,7 @@ namespace URPGDesktopCalc.Classes
         public double SPEmod { get; set; }
 
         public bool isDynamaxed { get; set; }
+        public bool isTera { get; set; }
 
         public BattlePokemon()
         {
@@ -40,6 +41,7 @@ namespace URPGDesktopCalc.Classes
             Name = P.Name;
             Type1 = P.Type1;
             Type2 = P.Type2;
+            TeraType = P.TeraType;
             MaxHP = P.MaxHP;
             ATT = P.ATT;
             DEF = P.DEF;
@@ -169,6 +171,23 @@ namespace URPGDesktopCalc.Classes
             }
 
             isDynamaxed = !isDynamaxed;
+        }
+
+        public void ToggleTerastal(Button button)
+        {
+            if (TeraType != "NO")
+            {
+                if (isTera)
+                {
+                    button.FlatAppearance.BorderColor = Color.Empty;
+                }
+                else
+                {
+                    button.FlatAppearance.BorderColor = Color.Red;
+                }
+
+                isTera = !isTera;
+            }
         }
 
         public void ResetMods()
